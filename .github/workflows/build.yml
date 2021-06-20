@@ -14,6 +14,9 @@ jobs:
         include:
           - board: nice60
     steps:
+      - name: Define build timestamp
+        id: timestamp
+        run: echo "::set-output name=timestamp::$(date +'%H%M%S-%d%m%Y')"
       - name: Checkout
         uses: actions/checkout@v2
       - name: Cache west modules
@@ -45,10 +48,10 @@ jobs:
         run: |
           if [ -n "${{ matrix.shield }}" ]; then
             SHIELD_ARG="-DSHIELD=${{ matrix.shield }}"
-            ARTIFACT_NAME="${{ matrix.shield }}-${{ matrix.board }}-zmk"
+            ARTIFACT_NAME="${{ matrix.shield }}-${{ matrix.board }}-${{ steps.timestamp.outputs.timestamp }}-zmk"
           else
             SHIELD_ARG=
-            ARTIFACT_NAME="${{ matrix.board }}-zmk"
+            ARTIFACT_NAME="${{ matrix.board }}-${{ steps.timestamp.outputs.timestamp }}-zmk"
           fi
 
           echo ::set-output name=shield-arg::${SHIELD_ARG}
