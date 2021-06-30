@@ -9,6 +9,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+&kscan0 {
+    debounce-period = <10>;
+};
+
 / {
 	keymap0: keymap {
 		compatible = "zmk,keymap";
