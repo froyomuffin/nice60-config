@@ -34,9 +34,9 @@
 
 		colemak_layer {
 			bindings = <
-	&kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp   N8  &kp  N9 &kp  N0  &kp MINUS &kp EQUAL &kp BSPC
+	&kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp   N8  &kp  N9 &kp  N0  &kp MINUS &kp EQUAL &mo CTL2
 	&kp TAB  &kp Q  &kp W  &kp F  &kp P  &kp B  &kp J  &kp L  &kp  U   &kp  Y  &kp  SEMI  &kp LBKT &kp RBKT  &kp BSLH
-	&mo CTL2   &kp A  &kp R  &kp S  &kp T  &kp G  &kp M  &kp N  &kp   E   &kp  I  &kp O &kp SQT           &kp RET
+	&kp BSPC  &kp A  &kp R  &kp S  &kp T  &kp G  &kp M  &kp N  &kp   E   &kp  I  &kp O &kp SQT           &kp RET
 	&kp LSHFT  &kp Z  &kp X  &kp C  &kp D  &kp V  &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH         &kp UP
 	&kp LCTRL &kp LALT &kp LGUI               &kp SPACE                 &mo CTL1    &kp LEFT  &kp  DOWN  &kp  RIGHT
 			>;
@@ -54,8 +54,8 @@
 
 		fn_layer_2 {
 			bindings = <
-&kp GRAVE  &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none   &none   &none   &none   &none   &out OUT_USB &out OUT_BLE   &bootloader
-&trans         &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &reset
+&kp GRAVE  &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none   &none   &none   &none   &none   &out OUT_USB &out OUT_BLE   &none
+&trans         &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none   &bootloader      &reset
 &trans           &none     &none     &none     &none     &none     &none     &none     &none     &none     &none      &none      &bt BT_CLR 
 &trans              &none     &none     &none      &none      &none      &none      &none      &none      &none      &none      &trans
 &trans       &trans       &trans                                     &trans                                       &trans     &trans     &trans     &trans
