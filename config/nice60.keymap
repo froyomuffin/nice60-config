@@ -14,10 +14,6 @@
 #define CTL1 2
 #define CTL2 3
 
-&kscan0 {
-    debounce-period = <15>;
-};
-
 / {
 	keymap0: keymap {
 		compatible = "zmk,keymap";
